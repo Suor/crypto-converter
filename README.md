@@ -1,6 +1,6 @@
 # Crypto Converter
 
-This project provides an API that performs currency conversions using live exchange rates stored in Redis. The exchange rates are retrieved from an external service (e.g., Binance) by a **Quote Consumer**, which fetches quotes periodically and stores them to be used by API daemon. By default the conversion is done based on the latest available quotes, but it is also possible to specify a timestamp to use quote, which was be closest to it.
+This project provides an API that performs currency conversions using live exchange rates stored in Redis. The exchange rates are retrieved from an external service (e.g., Binance) by a separate "Quote Consumer" process, which fetches quotes periodically and stores them to be used by API daemon. By default the conversion is done based on the latest available quotes, but it is also possible to specify a timestamp to use a quote closest to it.
 
 
 ## Running
